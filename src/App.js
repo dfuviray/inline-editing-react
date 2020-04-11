@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Table from './components/table/Table';
 
 function App() {
+  const products = [
+    { name: 'Apple', price: 3 },
+    { name: 'Orange', price: 4 },
+    { name: 'Lemon', price: 2 },
+    { name: 'Banana', price: 6 },
+    { name: 'Grapes', price: 3 },
+    { name: 'Pineapple', price: 3 },
+    { name: 'Strawberry', price: 4 },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Table labels={['#', 'Product', 'Price']} items={products} />
     </div>
   );
 }
